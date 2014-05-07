@@ -2,8 +2,9 @@
 # This  {.class="fragment"}
 #<span class="fragment">Internship</span>
 # Thing  {.class="fragment"}
-
 Bentley Jensen
+<br>
+<small><a href='./othersites/seniorproject/index.html'>Go here</a></small>
 
 
 
