@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <Title>Bentley's Portfolio</Title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.production.css">
+
+        <link rel="shortcut icon" href="img/favicon.ico">
+
+        <script src="js/tota11y.min.js"></script>
+    </head>
+    <body>
+        <header class="page-header">
+            <img class='whitesvg page-header_item' src="img/main-logo.svg" alt="Main logo">
+            <nav class="page-header_item">
+                <ul role="menubar" class="nav-list">
+                    <li role="presentation" >
+                        <a href="index.html" role="menuitem" class="nav-list_item">Home</a>
+                    </li>
+                    <li role="presentation" >
+                        <a href="about.html" role="menuitem" class="nav-list_item">About Me</a>
+                    </li>
+                    <li role="presentation" >
+                        <a href="work.html" role="menuitem" class="nav-list_item">Work</a>
+                    </li>
+                    <li role="presentation" >
+                        <a href="contact.html" role="menuitem" class="nav-list_item nav-list_item-active">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="centered">Contact Me</h1>
+            <div>
+                <p>
+                    Bentley Jensen<br>
+                    Portland, OR<br>
+                    Email: <a href="mailto:bentleyjensen@gmail.com">bentleyjensen@gmail.com</a><br>
+                    GitHub: <a href="https://github.com/bentleyjensen/">bentleyjensen</a><br>
+                    Discord: <a href="discord:bentilonious#9204">bentilonious#9204</a>
+                </p>
+                <p>
+                    <a href="mailto:testemail@gmail.com">Send me an email</a>
+                </p>
+                <form id="contact-form">
+                    <label class="contact-form-field" for="contact-email">* Email:</label>
+                    <input class="contact-form-field" id="contact-email" type="email" required>
+
+                    <label class="contact-form-field" for="contact-phone">Phone:</label>
+                    <input class="contact-form-field" id="contact-phone" type="tel">
+
+                    <label class="contact-form-field" for="contact-message">* Message (max. 240 characters):</label>
+                    <textarea class="contact-form-field" id="contact-message" maxlength="240" required></textarea>
+
+                    <input class="contact-form-field" type="submit" value="Send Message">
+                </form>
+            </div>
+        </main>
+        <footer class="page-footer">
+            <p>Find me on</p>
+            <div class="social-media">
+                <img alt="github" src="img/github-logo.svg">
+                <img alt="twitter" src="img/twitter-logo.svg">
+                <img alt="linkedin" src="img/linkedin-logo.svg">
+            </div>
+        </footer>
+    </body>
+</html>

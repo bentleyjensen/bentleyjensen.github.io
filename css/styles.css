@@ -1,0 +1,299 @@
+/*
+https://madlittlemods.github.io/postcss-css-variables/playground/
+http://autoprefixer.github.io/
+*/
+
+:root {
+    /*
+    https://www.nordtheme.com/
+    https://www.nordtheme.com/docs/colors-and-palettes
+    */
+    /* Polar Night */
+    --Nord0: #2E3440;
+    --Nord1: #3B4252;
+    --Nord2: #434C5E;
+    --Nord3: #4C566A;
+
+    /* Snow Storm */
+    --Nord4: #D8DEE9;
+    --Nord5: #E5E9F0;
+    --Nord6: #ECEFF4;
+
+    /* Frost */
+    --Nord7: #8FBCBB;
+    --Nord8: #88C0D0;
+    --Nord9: #81A1C1;
+    --Nord10: #5E81AC;
+
+    /* Aurora */
+    --Nord11: #BF616A;
+    --Nord12: #D08770;
+    --Nord13: #EBCB8B;
+    --Nord14: #A3BE8C;
+    --Nord15: #B48EAD;
+
+    /* TODO: simplify color scheme */
+    --color-primary: ;
+    --color-secondary: ;
+    --color-accent-primary: ;
+    --color-accent-secondary: ;
+    --bg-color-primary: ;
+    --bg-color-secondary: ;
+    --color-black-alpha: rgba(0, 0, 0, 0.3);
+
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    --sun1: #edc655;
+    --sun2: #f70404;
+    --sun3: #a635D6;
+    --sun4: #edc655;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Nord0);
+    color: var(--Nord6);
+    font-family: 'Oxygen', sans-serif;
+    font-weight: var(--font-weight-normal);
+    font-size: 16px;
+    font-variant: small-caps;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: var(--font-weight-bold);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: var(--font-weight-bold);
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: var(--font-weight-bold);
+}
+
+table {
+    margin: 30px;
+}
+
+a {
+    color: var(--Nord10);
+}
+
+a:hover, a.focus {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--Nord9);
+}
+
+a:active {
+    color: var(--Nord7);
+}
+
+button,
+.button {
+    border: none;
+    font-family: inherit;
+    background-color: var(--Nord15);
+    color: var(--Nord4);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid var(--color-black-alpha);
+    transition: 0.4s background-color;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    cursor: pointer;
+    background-color: var(--Nord8);
+}
+
+.button_secondary {
+    background-color: var(--Nord13);
+    color: var(--Nord3);
+}
+
+.whitesvg {
+    filter: invert(100);
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.nav-list_item {
+    /* TODO: make fancier & add hover animation */
+}
+
+.nav-list_item-active {
+    text-decoration: none;
+}
+
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.profile_portrait {
+    width: 250px;
+    height: auto;
+    margin-right: 40px;
+    float: left;
+    border-radius: 50%;
+}
+
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.page-header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+}
+
+.page-header_item {
+    flex: 0 1 200px;
+}
+
+.page-header_item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.project-list_item {
+    background-color: var(--Nord2);
+    padding: 10px 10px;
+}
+
+.skills-list {
+    line-height: 30%;
+}
+
+.download-resume {
+    display: inline-block;
+    margin: 20px;
+}
+
+.centered {
+    text-align: center;
+}
+
+#contact-form {
+    margin: 10px;
+}
+
+.contact-form-field {
+    display: block;
+}
+
+label.contact-form-field {
+    margin: 20px 0 5px auto;
+}
+
+@keyframes color-change {
+    0% {
+        fill: var(--sun1);
+    }
+    33% {
+        fill: var(--sun2);
+    }
+    66% {
+        fill: var(--sun3);
+    }
+    100%{
+        fill: var(--sun4);
+    }
+}
+
+@keyframes sun-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 50px);
+    }
+    to {
+        transform: translate(200px, 50px);
+    }
+  }
+
+@keyframes cloud-move-reverse {
+    from {
+        transform: translate(446px, 48px);
+    }
+    to {
+        transform: translate(100px, 48px);
+    }
+}
+
+.sun {
+    animation: 3s color-change infinite normal linear;
+}
+
+.sun-outline {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: 5s sun-spin infinite normal linear;
+}
+
+.cloud-front {
+    animation: 30s cloud-move infinite alternate ease;
+}
+
+.cloud-back {
+    animation: 40s cloud-move-reverse infinite alternate linear;
+}
+
+@media all and (max-width: 500px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (min-width: 750px) {
+    .project-list {
+        gap: 10px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
