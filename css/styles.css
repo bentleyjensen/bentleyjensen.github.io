@@ -172,6 +172,8 @@ button:focus,
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .page-header {
@@ -230,6 +232,16 @@ button:focus,
 
 .skills-list {
   line-height: 30%;
+}
+
+.social-media-list > img {
+  height: 50px;
+  margin: 30px 10px 30px 10px;
+}
+
+.social-media-footer > img {
+  height: 20px;
+  margin: 5px;
 }
 
 .download-resume {

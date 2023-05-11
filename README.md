@@ -1,3 +1,6 @@
+# THIS PROJECT IS DEPRECATED IN FAVOR OF [BENTLEYJENSEN.GITHUB.IO](https://github.com/bentleyjensen/bentleyjensen.github.io)
+
+
 # Portfolio
 
 This is a portfolio of me and my work. Hopefully it will get me jobs.
@@ -16,3 +19,7 @@ This site is built in vanilla HTML, so there really isn't anything to build. You
 1. This result is then pasted into `css/styles.production.css`
 1. Add this to the top of the production css: `/* stylelint-disable */`
 1. Commit both files changes
+
+
+# Notes
+* Free icons provided by worldvectorlogo.com and iconfinder.com
