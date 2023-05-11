@@ -18,27 +18,27 @@
     </head>
     <body>
         <header class="page-header">
-            <img class='whitesvg page-header_item' src="img/main-logo.svg" alt="Main logo">
-            <nav class="page-header_item">
+            <img class='whitesvg page-header-item' src="img/main-logo.svg" alt="Main logo">
+            <nav class="page-header-item">
                 <ul role="menubar" class="nav-list">
                     <li role="presentation" >
-                        <a href="index.html" role="menuitem" class="nav-list_item">Home</a>
+                        <a href="index.html" role="menuitem" class="nav-list-item">Home</a>
                     </li>
                     <li role="presentation" >
-                        <a href="about.html" role="menuitem" class="nav-list_item">About Me</a>
+                        <a href="about.html" role="menuitem" class="nav-list-item">About Me</a>
                     </li>
                     <li role="presentation" >
-                        <a href="work.html" role="menuitem" class="nav-list_item">Work</a>
+                        <a href="work.html" role="menuitem" class="nav-list-item">Work</a>
                     </li>
                     <li role="presentation" >
-                        <a href="contact.html" role="menuitem" class="nav-list_item nav-list_item-active">Contact</a>
+                        <a href="contact.html" role="menuitem" class="nav-list-item nav-list-item-active">Contact</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <main>
             <h1 class="centered">Contact Me</h1>
-            <div>
+            <div class="centered">
                 <p>
                     Bentley Jensen<br>
                     Portland, OR<br>
@@ -49,17 +49,22 @@
                 <p>
                     <a href="mailto:testemail@gmail.com">Send me an email</a>
                 </p>
-                <form id="contact-form">
+            </div>
+            <div class="contact-form">
+                <form id="contact-form" name="portfolio-contact-form" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="hidden-field">
                     <label class="contact-form-field" for="contact-email">* Email:</label>
-                    <input class="contact-form-field" id="contact-email" type="email" required>
+                    <input class="contact-form-field" id="contact-email" type="email" name="email_address" required>
 
                     <label class="contact-form-field" for="contact-phone">Phone:</label>
-                    <input class="contact-form-field" id="contact-phone" type="tel">
+                    <input class="contact-form-field" id="contact-phone" type="tel" name="contact_phone">
+                    <input class="hidden-field" type="checkbox" name="hidden-field" contents="This field is for robots.">
 
                     <label class="contact-form-field" for="contact-message">* Message (max. 240 characters):</label>
-                    <textarea class="contact-form-field" id="contact-message" maxlength="240" required></textarea>
+                    <textarea class="contact-form-field" id="contact-message" name="message" maxlength="240" placeholder="Enter your message" required></textarea>
 
-                    <input class="contact-form-field" type="submit" value="Send Message">
+                    <div data-netlify-recaptcha="true"></div>
+
+                    <input class="button button-submit contact-form-field " type="submit" value="Send Message">
                 </form>
             </div>
         </main>

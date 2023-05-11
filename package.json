@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/bentleyjensen/portfolio-website/issues"
   },
-  "homepage": "https://github.com/bentleyjensen/portfolio-website#readme"
+  "homepage": "https://github.com/bentleyjensen/portfolio-website#readme",
+  "devDependencies": {
+    "stylelint": "^14.7.1",
+    "stylelint-config-standard": "^25.0.0"
+  }
 }

@@ -18,20 +18,20 @@
     </head>
     <body>
         <header class="page-header">
-            <img class='whitesvg page-header_item' src="img/main-logo.svg" alt="Main logo">
-            <nav class="page-header_item">
+            <img class='whitesvg page-header-item' src="img/main-logo.svg" alt="Main logo">
+            <nav class="page-header-item">
                 <ul role="menubar" class="nav-list">
                     <li role="presentation" >
-                        <a href="index.html" role="menuitem" class="nav-list_item">Home</a>
+                        <a href="index.html" role="menuitem" class="nav-list-item">Home</a>
                     </li>
                     <li role="presentation" >
-                        <a href="about.html" role="menuitem" class="nav-list_item">About Me</a>
+                        <a href="about.html" role="menuitem" class="nav-list-item">About Me</a>
                     </li>
                     <li role="presentation" >
-                        <a href="work.html" role="menuitem" class="nav-list_item nav-list_item-active">Work</a>
+                        <a href="work.html" role="menuitem" class="nav-list-item nav-list-item-active">Work</a>
                     </li>
                     <li role="presentation" >
-                        <a href="contact.html" role="menuitem" class="nav-list_item">Contact</a>
+                        <a href="contact.html" role="menuitem" class="nav-list-item">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -39,33 +39,53 @@
         <main>
             <h1 class="centered">Things Bentley Built</h1>
             <div class="project-list">
-                <div class="project-list_item">
-                    <h2>Sudoku</h2>
-                    <p> Python</p>
-                    <p>A playable command line game. It can also solve medium and some medium-hard sudoku boards.</p>
-                    <a href="https://github.com/bentleyjensen/python-sudoku">Github</a>
+                <div class="project-list-item">
+                    <h2>A1: Pokedex</h2>
+                    <p>Vanilla HTML, Bootstrap, jQuery, eslint, stylelint, Github Pages</p>
+                    <img class="project-img" src="./img/project_pokedex.png" />
+                    <p>This project was focused on learning to use Bootstrap, jQuery, and interact with an external API. It has a responsive layout and works with a public <a href="https://pokeapi.co" target="_blank">Pokemon API</a>. Dig through and pick a pokemon to see a picture of it and some details.</p>
+                    <a href="https://github.com/bentleyjensen/CF-Pokedex">Github</a>
+                    <a href="https://bentleyjensen.github.io/CF-Pokedex/">Demo</a>
                 </div>
-                <div class="project-list_item">
-                    <h2>Whiteboard</h2>
-                    <p>Node.js</p>
-                    <p>Draw something, with your friends! A student project I did as an intern at &yet</p>
-                    <a href="https://github.com/bentleyjensen/whiteboard">Github</a>
+                <div class="project-list-item">
+                    <h2>A2: MyFlix - API</h2>
+                    <p>Express.js, Mongoose, MondoDB, Passport.js, JSDoc, Heroku</p>
+                    <img class="project-img" src="./img/project_myFlix-api.png" />
+                    <p>This API is built with a MongoDB instance behind it, implements full authorization through Passport, and has JSDoc for easy endpoint documentation. Currently Hosted by Heroku. It serves movies, similar in spirit to IMDB.</p>
+                    <a href="https://github.com/bentleyjensen/movie-api">Github</a>
+                    <a href="https://shrouded-fortress-53636.herokuapp.com/">Demo</a>
                 </div>
-                <div class="project-list_item">
-                    <h2>Almost Spanish Zork</h2>
-                    <p>Node.js</p>
-                    <p>A command line game done in Node.js, with inspiration from the one I played as a kid</p>
-                    <a href="https://github.com/bentleyjensen/Almost-Spanish-Zork">Github</a>
+                <div class="project-list-item">
+                    <h2>A3: MyFlix - React</h2>
+                    <p>React.js, Redux, Parcel, Bootstrap, Netlify</p>
+                    <img class="project-img" src="img/project_myFlix-React.png" />
+                    <p>Built to work with the MyFlix API, this frontend is built in React and bundled with parcel. Browse movies, save favorties, and update user info. Hosted by Netlify.</p>
+                    <a href="https://github.com/bentleyjensen/myflix-client-react">Github</a>
+                    <a href="https://bentley-myflix-client-react.netlify.app/">Demo</a>
                 </div>
-                <div class="project-list_item">
-                    <h2>KidSpirit Recipe Book - WIP</h2>
-                    <p>Built for OSU KidSpirit's cooking program. Enter recipes and how many you're cooking for and it'll make a shopping list based on current inventory.</p>
-                    <a href="https://github.com/bentleyjensen/ksrb-web">Github</a>
+                <div class="project-list-item">
+                    <h2>A4: Meet App</h2>
+                    <p>TDD, CD, Google Calendar, OAuth, Serverless</p>
+                    <img class="project-img" src="./img/project_meet.png" />
+                    <p>A Progressive web app built with a TDD approach, which does OAuth via AWS Serverless functions and gets the events from a google calendar. Shows (fake) events for you to meet up with your friends.</p>
+                    <a href="https://github.com/bentleyjensen/meet-app">Github</a>
+                    <a href="https://bentleyjensen.github.io/meet-app/">Demo</a>
                 </div>
-                <div class="project-list_item">
-                    <h2>Mom's Library - WIP</h2>
-                    <p>My mom is a middle school teacher who loans out her books - and can't keep track of them! A project built to solve a problem.</p>
-                    <a href="https://github.com/bentleyjensen/library-www">Github</a>
+                <div class="project-list-item">
+                    <h2>A5: Chat App</h2>
+                    <p>React Native, Google Firestore</p>
+                    <img class="project-img" src="./img/main-logo.svg" />
+                    <p>This native app can build for Android or iOS thanks to React Native. It features caching, offline mode, realtime chat, and is backed by a Google Firestore database. Chat with your friends!</p>
+                    <a href="https://github.com/bentleyjensen/chat-app">Github</a>
+                    <a href="some youtube link">TODO: Project Video</a>
+                </div>
+                <div class="project-list-item">
+                    <h2>A6: MyFlix - Angular</h2>
+                    <p>Angular, Typedoc, Github Pages, Angular Material</p>
+                    <img class="project-img" src="./img/project_myFlix-Angular.png" />
+                    <p>A Single Page App, this is another frontend for the MyFlix API, but this time in Angular. Utilizes the Material design library for Angular.</p>
+                    <a href="https://github.com/bentleyjensen/myflix-client-angular">Github</a>
+                    <a href="https://bentleyjensen.github.io/myflix-client-angular">Live Project</a>
                 </div>
             </div>
         </main>
