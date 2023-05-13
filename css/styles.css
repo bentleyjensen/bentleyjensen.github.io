@@ -35,7 +35,7 @@ http://autoprefixer.github.io/
   --nord15: #b48ead;
 
   --color-primary: var(--nord4);
-  --color-secondary: var(--nord15);
+  --color-secondary: var(--nord6);
   --color-dark-primary: var(--nord00);
   --color-dark-secondary: var(--nord2);
   --color-accent-primary: var(--nord8);
@@ -80,7 +80,7 @@ table {
 }
 
 a {
-  color: var(--color-accent-primary);
+  color: var(--color-secondary);
 }
 
 a:hover,
@@ -90,7 +90,7 @@ a.focus {
 
 /* visited is same color as unvisited */
 a:visited {
-  color: var(--color-accent-primary);
+  color: var(--color-secondary);
 }
 
 a.button {

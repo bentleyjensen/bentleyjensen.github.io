@@ -59,7 +59,7 @@ table {
 }
 
 a {
-  color: #88c0d0;
+  color: #eceff4;
 }
 
 a:hover,
@@ -69,7 +69,7 @@ a.focus {
 
 /* visited is same color as unvisited */
 a:visited {
-  color: #88c0d0;
+  color: #eceff4;
 }
 
 a.button {
