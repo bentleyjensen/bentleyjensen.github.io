@@ -22,4 +22,4 @@ This site is built in vanilla HTML, so there really isn't anything to build. You
 
 
 # Notes
-* Free icons provided by worldvectorlogo.com and iconfinder.com
+* Free icons provided by [worldvectorlogo](https://worldvectorlogo.com/) and [iconfinder](https://www.iconfinder.com/)

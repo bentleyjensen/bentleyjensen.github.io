@@ -10,6 +10,7 @@ http://autoprefixer.github.io/
   */
 
   /* Polar Night */
+  --nord00: #242933;
   --nord0: #2e3440;
   --nord1: #3b4252;
   --nord2: #434c5e;
@@ -33,27 +34,17 @@ http://autoprefixer.github.io/
   --nord14: #a3be8c;
   --nord15: #b48ead;
 
-  /* TODO: simplify color scheme */
-
-  /* --color-primary: ; */
-
-  /* --color-secondary: ; */
-
-  /* --color-accent-primary: ; */
-
-  /* --color-accent-secondary: ; */
-
-  /* --bg-color-primary: ; */
-
-  /* --bg-color-secondary: ; */
+  --color-primary: var(--nord4);
+  --color-secondary: var(--nord15);
+  --color-dark-primary: var(--nord00);
+  --color-dark-secondary: var(--nord2);
+  --color-accent-primary: var(--nord8);
+  --color-accent-secondary: var(--nord10);
+  --color-accent-dark: var(--nord0);
 
   --color-black-alpha: rgba(0 0 0 30%);
   --font-weight-normal: 400;
   --font-weight-bold: 700;
-  --sun1: #edc655;
-  --sun2: #f70404;
-  --sun3: #a635d6;
-  --sun4: #edc655;
 }
 
 * {
@@ -61,12 +52,12 @@ http://autoprefixer.github.io/
 }
 
 body {
-  background-color: var(--nord0);
-  color: var(--nord6);
+  background-color: var(--color-dark-primary);
+  color: var(--color-primary);
   font-family: Oxygen, sans-serif;
   font-weight: var(--font-weight-normal);
   font-size: 16px;
-  font-variant: small-caps;
+  font-variant: normal;
 }
 
 h1 {
@@ -89,7 +80,7 @@ table {
 }
 
 a {
-  color: var(--nord10);
+  color: var(--color-accent-primary);
 }
 
 a:hover,
@@ -97,8 +88,9 @@ a.focus {
   text-decoration: none;
 }
 
+/* visited is same color as unvisited */
 a:visited {
-  color: var(--nord9);
+  color: var(--color-accent-primary);
 }
 
 a.button {
@@ -106,15 +98,15 @@ a.button {
 }
 
 a:active {
-  color: var(--nord7);
+  color: var(--color-accent-secondary);
 }
 
 button,
 .button {
   border: none;
   font-family: inherit;
-  background-color: var(--nord15);
-  color: var(--nord4);
+  background-color: var(--color-dark-secondary);
+  color: var(--color-accent-primary);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -127,12 +119,8 @@ button:focus,
 .button:hover,
 .button:focus {
   cursor: pointer;
-  background-color: var(--nord8);
-}
-
-.button-secondary {
-  background-color: var(--nord13);
-  color: var(--nord3);
+  background-color: var(--color-accent-primary);
+  color: var(--color-accent-dark);
 }
 
 .whitesvg {
@@ -178,8 +166,10 @@ button:focus,
 
 .page-header {
   width: 100%;
-  padding: 20px;
+  padding: 10px 20px 10px 20px;
   display: flex;
+  border-bottom: 2px solid var(--color-accent-dark);
+  margin-bottom: 50px;
 }
 
 .page-header-item {
@@ -200,10 +190,16 @@ button:focus,
 }
 
 .project-list-item {
-  background-color: var(--nord2);
+  background-color: var(--color-primary);
+  color: var(--color-accent-dark);
   padding: 10px;
   display: flex;
   flex-direction: column;
+  border-radius: 7px;
+}
+
+.project-list-item a {
+  color: var(--color-accent-dark);
 }
 
 .profile {
@@ -231,12 +227,16 @@ button:focus,
   line-height: 30%;
 }
 
-.social-media-list > img {
+.social-media-list img,
+.social-media-list a {
+  text-decoration: none;
   height: 50px;
   margin: 30px 10px 30px 10px;
 }
 
-.social-media-footer > img {
+.social-media-footer img,
+.social-media-footer a {
+  text-decoration: none;
   height: 20px;
   margin: 5px;
 }
@@ -279,6 +279,7 @@ textarea {
   width: auto;
   float: right;
   margin: 20px 0;
+  color: inherit;
 }
 
 .project-img {
@@ -294,72 +295,6 @@ textarea {
 
 label.contact-form-field {
   margin: 20px 0 5px auto;
-}
-
-@keyframes color-change {
-  0% {
-    fill: var(--sun1);
-  }
-
-  33% {
-    fill: var(--sun2);
-  }
-
-  66% {
-    fill: var(--sun3);
-  }
-
-  100% {
-    fill: var(--sun4);
-  }
-}
-
-@keyframes sun-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-
-.sun {
-  animation: 3s color-change infinite normal linear;
-}
-
-.sun-outline {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: 5s sun-spin infinite normal linear;
-}
-
-.cloud-front {
-  animation: 30s cloud-move infinite alternate ease;
-}
-
-.cloud-back {
-  animation: 40s cloud-move-reverse infinite alternate linear;
 }
 
 @media all and (max-width: 500px) {
